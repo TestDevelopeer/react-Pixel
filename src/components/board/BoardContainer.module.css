@@ -1,0 +1,18 @@
+.board {
+    max-width: 1280px;
+    min-width: 1280px;
+    max-height: 720px;
+    min-height: 720px;
+    border: 1px solid black;
+}
+
+.square {
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+    -webkit-user-select: none;
+    /* user-select -- это нестандартное свойство */
+    -moz-user-select: none;
+    /* поэтому нужны префиксы */
+    -ms-user-select: none;
+}
