@@ -9,6 +9,7 @@ const ResolutionContainer = (props) => {
         props.setBoardWidth(boardWidth);
         props.setBoardHeight(boardHeight);
         props.setCanvasObjects(props.defaultFigures);
+        props.setColor(props.colorBoard, props.board);
     }
     return (
         <Card>

@@ -5,19 +5,13 @@ const CircleContainer = (props) => {
     const [xStart, setXstart] = useState(0);
     const [yStart, setYstart] = useState(0);
     const [radius, setRadius] = useState(0);
-    const [degrees, setDegrees] = useState(0);
     const [isDot, setIsDot] = useState(false);
     const [isFigure, setIsFigure] = useState(false);
-    const getRadians = (degrees) => {
-        return (Math.PI / 180) * degrees;
-    }
     const draw = () => {
         const settings = {
             xStart,
             yStart,
             radius,
-            radians: getRadians(degrees),
-            degrees,
             isDot,
             isFigure,
             color: props.board.fillStyle
@@ -86,21 +80,6 @@ const CircleContainer = (props) => {
                                     aria-describedby="basic-addon2"
                                     value={radius}
                                     onChange={(e) => props.changeCoordinate(e.target.value, setRadius, props.width)}
-                                />
-                            </InputGroup>
-                            <InputGroup className="mb-3">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-default">Градусы</InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <FormControl
-                                    onFocus={props.handleFocus}
-                                    type="number"
-                                    id="end-y"
-                                    placeholder="Введите y"
-                                    aria-label="Новый цвет"
-                                    aria-describedby="basic-addon2"
-                                    value={degrees}
-                                    onChange={(e) => props.changeCoordinate(e.target.value, setDegrees, 360)}
                                 />
                             </InputGroup>
                         </Col>

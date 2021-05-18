@@ -1,8 +1,7 @@
 import {Button, Card, Col, FormControl, InputGroup, Row} from "react-bootstrap";
-import React, {useState} from "react";
+import React from "react";
 
 const LineWidthContainer = (props) => {
-    const [pixelSize, setPixelSize] = useState(1);
     return (
         <Card>
             <Card.Header>Толщина линии.</Card.Header>
@@ -17,11 +16,11 @@ const LineWidthContainer = (props) => {
                                 placeholder="Введите размер"
                                 aria-label="Пиксель"
                                 aria-describedby="basic-addon2"
-                                value={pixelSize}
-                                onChange={(e) => setPixelSize(e.target.value)}
+                                value={props.pixelSize}
+                                onChange={(e) => props.setPixelSize(e.target.value)}
                             />
                         </InputGroup>
-                        <Button block variant="outline-success" onClick={() => props.setLineWidth(pixelSize)}>Установить</Button>
+                        <Button block variant="outline-success" onClick={() => props.setLineWidth(props.pixelSize, props.board)}>Установить</Button>
                     </Col>
                 </Row>
             </Card.Body>

@@ -3,7 +3,7 @@ import React, {useState} from "react";
 
 const ClearContainer = (props) => {
     const clearBoard = () => {
-        props.updateCanvas();
+        props.updateCanvas(props.board, props.boardWidth, props.boardHeight);
         props.setCanvasObjects(props.defaultFigures);
     }
     return (

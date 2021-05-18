@@ -6,7 +6,6 @@ import {SketchPicker} from 'react-color';
 const ColorContainer = (props) => {
     const [displayColorPicker, setDisplayColorPicker] = useState(false);
     const changeColor = (color) => {
-        console.log(color)
         props.board.fillStyle = color;
         props.board.strokeStyle = color;
     }
